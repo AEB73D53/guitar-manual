@@ -9,7 +9,7 @@
 <body>
   <header>
     <h1>🎸 吉他手动挡</h1>
-    <div id="status" class="status disconnected">未连接</div>
+    <button id="connectBtn" class="connect-btn">🔌 连接 ESP32</button>
   </header>
 
   <main>
@@ -18,17 +18,16 @@
     </section>
 
     <section class="log-panel">
-      <h2>事件日志</h2>
+      <h2>串口日志</h2>
       <ul id="log"></ul>
     </section>
   </main>
 
   <footer>
-    <p>ESP32 触摸引脚 → WiFi → MQTT → 本页 Web Audio 实时合成</p>
-    <p class="hint">提示: 第一次进入页面需要点一下任意位置来解锁浏览器音频。</p>
+    <p>ESP32 触摸引脚 → USB 串口 → 本页 Web Audio 实时合成</p>
+    <p class="hint">提示: 第一次进页面先点「连接 ESP32」选你的串口; 没插板子也能点按钮试听。</p>
   </footer>
 
-  <script src="https://unpkg.com/mqtt@5.10.1/dist/mqtt.min.js"></script>
   <script src="karplus-strong.js"></script>
   <script src="app.js"></script>
 </body>
