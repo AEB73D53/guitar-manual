@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吉他手动挡 · Guitar Manual</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎸 吉他手动挡</h1>
+    <div id="status" class="status disconnected">未连接</div>
+  </header>
+
+  <main>
+    <section class="chord-panel">
+      <div id="chords" class="chord-grid"></div>
+    </section>
+
+    <section class="log-panel">
+      <h2>事件日志</h2>
+      <ul id="log"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>ESP32 触摸引脚 → WiFi → MQTT → 本页 Web Audio 实时合成</p>
+    <p class="hint">提示: 第一次进入页面需要点一下任意位置来解锁浏览器音频。</p>
+  </footer>
+
+  <script src="https://unpkg.com/mqtt@5.10.1/dist/mqtt.min.js"></script>
+  <script src="karplus-strong.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
